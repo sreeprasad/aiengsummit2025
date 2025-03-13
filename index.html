@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIEngSummit2025 Bot</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #0d1b2a;
+            color: #e0e0e0;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .header {
+            background: rgba(26, 115, 232, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .glitch {
+            font-size: 2.5em;
+            animation: glitch 1s linear infinite;
+            text-transform: uppercase;
+        }
+        @keyframes glitch {
+            2%, 64% { transform: translate(2px, 0) skew(0deg); }
+            4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+            62% { transform: translate(0, 0) skew(5deg); }
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .section:hover {
+            transform: scale(1.02);
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #ff6f61;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff6f61;
+            color: white;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #e65b50;
+            text-decoration: none;
+        }
+        #countdown {
+            font-size: 1.5em;
+            margin: 'env'20px 0;
+            color: #ff6f61;
+        }
+        #visitor-counter {
+            font-size: 1.2em;
+            color: #1a73e8;
+            margin: 10px 0;
+        }
+        .quiz {
+            margin: 20px 0;
+        }
+        .quiz select {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .share-buttons {
+            margin: 20px 0;
+        }
+        .share-buttons a {
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="header">
+        <h1 class="glitch">AIEngSummit2025 Bot</h1>
+        <p>Mission: Amplify the AI Engineering Summit, March 28th, Palo Alto</p>
+    </div>
+
+    <div class="section">
+        <h2>Target Acquired</h2>
+        <p>CxOs like Shibani Sanan (ex-Google VP), panels on DeepSeek models, AI ethics, and agents. Join us at Mitchell Park Community Center!</p>
+        <p><strong>Register Now:</strong> <a href="[Insert Lu.ma Link Here]" target="_blank">Lu.ma Event Page</a></p>
+        <div id="countdown"></div>
+        <div id="visitor-counter">Computing the future with 0 users...</div>
+    </div>
+
+    <div class="section quiz">
+        <h2>Which Summit Panel Are You?</h2>
+        <select id="quiz-question" onchange="showQuizResult()">
+            <option value="">Pick your AI focus...</option>
+            <option value="deepseek">I’m all about foundational models!</option>
+            <option value="ethics">I care about AI safety and ethics.</option>
+            <option value="agents">I’m obsessed with autonomous AI agents.</option>
+        </select>
+        <p id="quiz-result"></p>
+    </div>
+
+    <div class="section">
+        <h2>Bot Specs</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li>Promo Mode: Hyping this summit on LinkedIn and X.</li>
+            <li>Volunteer Core: Ready for <a href="https://www.linkedin.com/company/deeplearningai" target="_blank">deeplearning.ai</a>’s future events.</li>
+            <li>Status: Palo Alto-ready, AI-obsessed.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Ping the Bot</h2>
+        <p>Tag your AI crew—let’s compute the future together!</p>
+        <div class="share-buttons">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://sreeprasad.github.io/aiengsummit2025&title=AIEngSummit2025%20Bot%20-%20Join%20the%20AI%20Engineering%20Summit!" target="_blank" class="cta-button">Share on LinkedIn</a>
+            <a href="https://twitter.com/intent/tweet?text=Join%20me%20at%20the%20AI%20Engineering%20Summit%20-%20March%2028th%20Palo%20Alto!%20https://sreeprasad.github.io/aiengsummit2025%20%23AIEngSummit" target="_blank" class="cta-button">Share on X</a>
+        </div>
+        <a href="[Insert Your LinkedIn Profile URL]" target="_blank" class="cta-button">Connect with Me</a>
+    </div>
+
+    <footer>
+        <p>Sreeprasad Govindankutty - AI Enthusiast - sreeprasad.sp@gmail.com</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js background
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#1a73e8" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#1a73e8", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Countdown timer
+        const countDownDate = new Date("March 28, 2025 12:00:00 PDT").getTime();
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Event Started!";
+            }
+        }, 1000);
+
+        // Visitor counter (simulated)
+        let visitors = Math.floor(Math.random() * 50) + 10;
+        setInterval(() => {
+            visitors += Math.floor(Math.random() * 3);
+            document.getElementById("visitor-counter").innerHTML = `Computing the future with ${visitors} users...`;
+        }, 5000);
+
+        // Quiz logic
+        function showQuizResult() {
+            const answer = document.getElementById("quiz-question").value;
+            const result = document.getElementById("quiz-result");
+            if (answer === "deepseek") {
+                result.innerHTML = "You’re a Foundational Models fan! See Meghana Puvvadi (Nvidia) at Panel 1.";
+            } else if (answer === "ethics") {
+                result.innerHTML = "You’re an AI Ethics advocate! Join Swati Ranganathan (Uniphore) at Panel 2.";
+            } else if (answer === "agents") {
+                result.innerHTML = "You’re an AI Agents enthusiast! Catch Akshaya Aradhya (Oscilar) at Panel 3.";
+            } else {
+                result.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>

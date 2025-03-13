@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIEngSummit2025 Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', Arial, sans-serif;
-            background-color: #0d1b2a;
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
             color: #e0e0e0;
             text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             overflow-x: hidden;
         }
         #particles-js {
@@ -22,16 +23,19 @@
             height: 100%;
             z-index: -1;
         }
-        .header {
-            background: rgba(26, 115, 232, 0.8);
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+        .hero {
+            background: url('https://www.transparenttextures.com/patterns/circuit-pattern.png'), linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            padding: 50px 20px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
         }
         .glitch {
-            font-size: 2.5em;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3em;
+            color: #00e676;
+            text-shadow: 0 0 10px #00e676, 0 0 20px #00e676;
             animation: glitch 1s linear infinite;
-            text-transform: uppercase;
         }
         @keyframes glitch {
             2%, 64% { transform: translate(2px, 0) skew(0deg); }
@@ -39,76 +43,111 @@
             62% { transform: translate(0, 0) skew(5deg); }
         }
         .section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 800px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .section:hover {
-            transform: scale(1.02);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00e676;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px #00e676;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
         }
         a {
             color: #1a73e8;
             text-decoration: none;
+            transition: color 0.3s;
         }
         a:hover {
+            color: #00e676;
             text-decoration: underline;
-            color: #ff6f61;
         }
         .cta-button {
             display: inline-block;
-            padding: 12px 25px;
-            background-color: #ff6f61;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #00e676, #1a73e8);
             color: white;
-            border-radius: 5px;
-            margin-top: 15px;
-            transition: background-color 0.3s;
+            border-radius: 25px;
+            margin: 10px;
+            font-weight: 700;
+            transition: background 0.3s, transform 0.3s;
         }
         .cta-button:hover {
-            background-color: #e65b50;
+            background: linear-gradient(45deg, #1a73e8, #00e676);
+            transform: scale(1.05);
             text-decoration: none;
         }
         #countdown {
-            font-size: 1.5em;
-            margin: 20px 0;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8em;
             color: #ff6f61;
+            margin: 20px 0;
+            text-shadow: 0 0 5px #ff6f61;
         }
         #visitor-counter {
             font-size: 1.2em;
             color: #1a73e8;
-            margin: 10px 0;
+            margin: 15px 0;
         }
         .quiz {
             margin: 20px 0;
         }
         .quiz select {
-            padding: 10px;
+            padding: 12px;
             font-size: 1em;
             border-radius: 5px;
-            margin: 10px;
+            background: #1b263b;
+            color: #e0e0e0;
+            border: 1px solid #00e676;
+            width: 80%;
+            max-width: 300px;
+        }
+        .quiz select:focus {
+            outline: none;
+            border-color: #1a73e8;
         }
         .share-buttons {
             margin: 20px 0;
         }
         .share-buttons a {
             margin: 0 10px;
-            font-size: 1.2em;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            font-size: 0.9em;
+        }
+        .icon {
+            margin-right: 8px;
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
     <div id="particles-js"></div>
 
-    <div class="header">
+    <div class="hero">
         <h1 class="glitch">AIEngSummit2025 Bot</h1>
         <p>Mission: Amplify the AI Engineering Summit, March 28th, Palo Alto</p>
     </div>
 
     <div class="section">
         <h2>Target Acquired</h2>
-        <p>CxOs like Shibani Sanan (ex-Google VP), panels on DeepSeek models, AI ethics, and agents. Join us at Mitchell Park Community Center!</p>
+        <p>🧠 CxOs like Shibani Sanan (ex-Google VP), panels on DeepSeek models, AI ethics, and agents. Join us at Mitchell Park Community Center!</p>
         <p><strong>Register Now:</strong> <a href="https://lu.ma/engsummit" target="_blank">Lu.ma Event Page</a></p>
         <!-- Check Lu.ma for an "Add to Calendar" link or .ics file. If available, add: <p><strong>Add to Calendar:</strong> <a href="[Calendar Invite Link]" target="_blank">Add to Your Calendar</a></p> -->
         <div id="countdown"></div>
@@ -129,9 +168,9 @@
     <div class="section">
         <h2>Bot Specs</h2>
         <ul style="list-style: none; padding: 0;">
-            <li>Promo Mode: Hyping this summit on LinkedIn and X.</li>
-            <li>Volunteer Core: Eager to help the AI Engineering Summit team with future events.</li>
-            <li>Status: Palo Alto-ready, AI-obsessed.</li>
+            <li>🚀 Promo Mode: Hyping this summit on LinkedIn and X.</li>
+            <li>🤝 Volunteer Core: Eager to help the AI Engineering Summit team with future events.</li>
+            <li>⚡ Status: Palo Alto-ready, AI-obsessed.</li>
         </ul>
     </div>
 
@@ -155,13 +194,13 @@
         // Particles.js background
         particlesJS("particles-js", {
             particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#1a73e8" },
+                number: { value: 100, density: { enable: true, value_area: 800 } },
+                color: { value: "#00e676" },
                 shape: { type: "circle" },
-                opacity: { value: 0.5, random: true },
+                opacity: { value: 0.7, random: true },
                 size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: "#1a73e8", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+                line_linked: { enable: true, distance: 120, color: "#1a73e8", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 3, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
             },
             interactivity: {
                 detect_on: "canvas",
